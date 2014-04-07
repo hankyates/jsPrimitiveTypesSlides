@@ -50,41 +50,64 @@
     <section class="slide">
       <h2>General</h2>
       <ul>
-        <li>Use Modules</li>
-        <li>Host on a CDN</li>
-        <li>Use Gzip</li>
-        <li>Set a Cache</li>
+        <li>Strings</li>
+        <li>Boolean</li>
+        <li>Number</li>
+        <li>Arrays</li>
+        <li>Object</li>
       </ul>
     </section>
 
     <section class="slide">
-      <h2>AJAX</h2>
-      <ul>
-        <li>Processing Response is important!</li>
-        <li>Number of Requests vs Size of Request</li>
-        <li>Storing "Resources" in response</li>
-        <li>http://json-schema.org/</li>
-      </ul>
+      <h2>Strings</h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">MDN</a>
+      <code>
+        var name = 'Hank';
+        name.toLowerCase();
+        // -> hank
+        name.toUpperCase();
+        // -> HANK
+        name.subStr(0, 1);
+        // -> H
+        name.indexOf('an');
+        // -> 1
+      </code>
     </section>
 
     <section class="slide">
-      <h2>Javascript Engines</h2>
-      <ul>
-        <li>V8</li>
-        <li>SpiderMonkey</li>
-        <li>Chakra</li>
-        <li>JavaScriptCore</li>
-      </ul>
+      <h2>Numbers</h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">MDN</a>
+      <code>
+        var five = 5;
+        five * 5;
+        // -> 25
+      </code>
+      <code>
+        var bigNumber = 12345.6789;
+        bigNumber.toFixed();
+        // -> 12345
+        bigNumber.toFixed(2);
+        // -> 12345.68
+      </code>
     </section>
 
     <section class="slide">
-      <h2>Accelerating Oz with V8</h2>
-      <iframe width="560" height="315" src="//www.youtube.com/embed/VhpdsjBUS3g" frameborder="0" allowfullscreen></iframe>
-    </section>
-
-    <section class="slide">
-      <h2>A Trip Down Memory Lane with Gmail and DevTools</h2>
-      <iframe width="560" height="315" src="//www.youtube.com/embed/x9Jlu_h_Lyw" frameborder="0" allowfullscreen></iframe>
+      <h2>Arrays</h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">MDN</a>
+      <code>
+        //var names = [];
+        //var names = new Array();
+        //var names = new Array(2);
+        var names = ['hank', 'danny'];
+        names.length;
+        // -> 2
+        names.indexOf('danny');
+        // -> 2
+        name.push('deb');
+        // -> ['hank', 'danny', 'deb'];
+        names.pop();
+        // -> ['hank', 'danny', 'deb'];
+      </code>
     </section>
 
     <!-- End slides. -->
