@@ -1,0 +1,26 @@
+{
+  "name": "js_performance_talk",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hankyates/js_performance_talk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hankyates/js_performance_talk/issues"
+  },
+  "homepage": "https://github.com/hankyates/js_performance_talk",
+  "devDependencies": {
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-gh-pages": "~0.9.1",
+    "grunt-bower-task": "~0.3.4"
+  }
+}

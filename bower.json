@@ -1,0 +1,19 @@
+{
+  "name": "js_performance_talk",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hankyates/js_performance_talk",
+  "authors": [
+    "Hank Yates <hankyates@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "deck.js": "~1.1.0"
+  }
+}
