@@ -16,6 +16,7 @@
   <link rel="stylesheet" media="screen" href="lib/deck.js/extensions/navigation/deck.navigation.css">
   <link rel="stylesheet" media="screen" href="lib/deck.js/extensions/status/deck.status.css">
   <link rel="stylesheet" media="screen" href="lib/deck.js/extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="lib/highlightjs/default.css">
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
   <link rel="stylesheet" media="screen" href="lib/deck.js/themes/style/swiss.css">
@@ -25,9 +26,8 @@
 
   <!-- Basic black and white print styles -->
   <link rel="stylesheet" media="print" href="lib/deck.js/core/print.css">
-
-  <!-- Required Modernizr file -->
   <script src="lib/deck.js/modernizr.custom.js"></script>
+
 </head>
 <body>
   <div class="deck-container">
@@ -35,7 +35,7 @@
     <!-- Begin slides. Just make elements with a class of slide. -->
 
     <section class="slide">
-      <h1>Javascript Performance</h1>
+      <h1>Javascript Primitive Types</h1>
     </section>
 
     <section class="slide">
@@ -61,53 +61,102 @@
     <section class="slide">
       <h2>Strings</h2>
       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">MDN</a>
-      <code>
+      <pre><code>
         var name = 'Hank';
+
         name.toLowerCase();
-        // -> hank
+        // hank
+
         name.toUpperCase();
-        // -> HANK
+        // HANK
+
         name.subStr(0, 1);
-        // -> H
+        // H
+
         name.indexOf('an');
-        // -> 1
-      </code>
+        // 1
+      </code></pre>
     </section>
 
     <section class="slide">
       <h2>Numbers</h2>
       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">MDN</a>
-      <code>
+      <pre><code>
         var five = 5;
+
         five * 5;
-        // -> 25
-      </code>
-      <code>
+        // 25
+      </code></pre>
+      <pre><code>
         var bigNumber = 12345.6789;
+
         bigNumber.toFixed();
-        // -> 12345
+        // 12345
+
         bigNumber.toFixed(2);
-        // -> 12345.68
-      </code>
+        // 12345.68
+      </code></pre>
     </section>
 
     <section class="slide">
       <h2>Arrays</h2>
       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">MDN</a>
-      <code>
+      <pre><code>
         //var names = [];
         //var names = new Array();
         //var names = new Array(2);
+
         var names = ['hank', 'danny'];
+
         names.length;
-        // -> 2
+        // 2
+
         names.indexOf('danny');
-        // -> 2
+        // 2
+
         name.push('deb');
-        // -> ['hank', 'danny', 'deb'];
+        // ['hank', 'danny', 'deb'];
+
         names.pop();
-        // -> ['hank', 'danny', 'deb'];
-      </code>
+        // ['hank', 'danny', 'deb'];
+      </code></pre>
+    </section>
+    
+    <section class="slide">
+      <h2>Objects</h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">MDN</a>
+      <pre><code>
+        var Danny = {
+          firstName: 'danny',
+          lastName: 'yates',
+          age: '24',
+          fullName: function() {
+            return this.firstname + ' ' + this.lastName;
+          }
+          
+        };
+        
+        Danny.fullName();
+        // 'danny yates'
+        Danny.firstName = 'dan';
+        Danny.fullName();
+        // 'dan yates'
+        Danny.firstName;
+        // 'dan'
+
+      </code></pre>
+    </section>
+    
+    <section class="slide">
+      <h2>Booleans</h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">MDN</a>
+      <pre><code>
+        var isLoaded = false;
+        if (!isLoaded) {
+          loadStuff();
+          isLoaded = true;
+        }
+      </code></pre>
     </section>
 
     <!-- End slides. -->
@@ -140,6 +189,7 @@
 <script src="lib/deck.js/extensions/status/deck.status.js"></script>
 <script src="lib/deck.js/extensions/navigation/deck.navigation.js"></script>
 <script src="lib/deck.js/extensions/scale/deck.scale.js"></script>
+<script src="lib/highlightjs/highlight.pack.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
@@ -147,5 +197,6 @@
     $.deck('.slide');
   });
 </script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
