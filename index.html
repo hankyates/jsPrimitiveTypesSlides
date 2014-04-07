@@ -16,6 +16,7 @@
   <link rel="stylesheet" media="screen" href="lib/deck.js/extensions/navigation/deck.navigation.css">
   <link rel="stylesheet" media="screen" href="lib/deck.js/extensions/status/deck.status.css">
   <link rel="stylesheet" media="screen" href="lib/deck.js/extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="/lib/highlightjs/default.css">
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
   <link rel="stylesheet" media="screen" href="lib/deck.js/themes/style/swiss.css">
@@ -26,8 +27,6 @@
   <!-- Basic black and white print styles -->
   <link rel="stylesheet" media="print" href="lib/deck.js/core/print.css">
 
-  <!-- Required Modernizr file -->
-  <script src="lib/deck.js/modernizr.custom.js"></script>
 </head>
 <body>
   <div class="deck-container">
@@ -140,6 +139,7 @@
 <script src="lib/deck.js/extensions/status/deck.status.js"></script>
 <script src="lib/deck.js/extensions/navigation/deck.navigation.js"></script>
 <script src="lib/deck.js/extensions/scale/deck.scale.js"></script>
+<script src="lib/highlightjs/highlight.pack.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
@@ -147,5 +147,6 @@
     $.deck('.slide');
   });
 </script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
